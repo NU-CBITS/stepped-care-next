@@ -1,0 +1,24 @@
+.show_container.widget div.content{
+  font-weight: bold;
+}
+
+#poll_question .content {
+  margin-top:0px;
+  margin-bottom:0px;
+}
+
+.content {
+  margin: 40px 0px;
+}
+
+.content p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  /* font-weight: 200/300; */
+  font-weight: normal;
+  line-height: 25px
+}
+
+.content.content-condensed {
+  margin: 5px 0px; 
+}

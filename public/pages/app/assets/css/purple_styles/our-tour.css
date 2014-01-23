@@ -1,0 +1,5 @@
+.popover-title button.close.end {
+  top: -5px;
+  right: -5px;
+  position: relative;
+}

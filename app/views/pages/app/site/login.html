@@ -1,0 +1,90 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <title>Log in</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" type='text/css' href="../assets/css/login/style.css" />
+  <link rel="stylesheet" type='text/css' href="../assets/css/purple_styles/application.css" />
+
+  <script type="text/javascript" src="../../config.js"></script>
+  <script type="text/javascript" src="../../define_environment.js"></script>
+  <script type="text/javascript" src="../assets/js/vendor/jquery-1.9.1.min.js"></script>
+
+  <script type="text/javascript" src="../assets/js/vendor/underscore-1.4.4.min.js"></script>
+  <script type="text/javascript" src="../assets/dynamo2/vendor/backbone-1.0.0.min.js"></script>
+  <script type="text/javascript" src="../assets/dynamo2/Core.js"></script>
+  <script> Dynamo.TriremeURL = Config[ENVIRONMENT].TriremeURL </script>
+  <script type="text/javascript" src="../assets/dynamo2/Core.Models.js"></script>
+  <script type="text/javascript"> 
+    Dynamo.XelementClass = eval(Config[ENVIRONMENT].DynamoXelementClass); 
+  </script>
+  <script type="text/javascript" src="../assets/js/common_login_code.js"></script>
+
+  <script>
+    function standardUserLogin(data, textStatus, jqXHR) {
+
+      Dynamo.login(data.user, 'index.html');
+
+    };
+
+    $(function() {
+      defineOnSubmitHandler(standardUserLogin);
+    });
+  </script>
+</head>
+
+
+<body>
+  <header>
+      <div class="col1">
+          <!-- MENU -->
+          <nav class="menu">
+          </nav>                
+          <!-- END MENU -->
+      </div>
+  </header>
+
+  <h1>
+    <a href="http://mohrlab.northwestern.edu/public/thinkfeeldo/index.html" class="logo">ThinkFeelDo</a>
+  </h1> 
+
+  <div class="row-fluid" style="margin-top: 15%">
+    <div class="span4 offset4">      
+      <form id="login" class="form-horizontal">
+        <div id="login-container" class="panel panel-default text-left">
+          <div class="panel-heading">  
+            <h2>Sign in</h2>
+          </div>
+          <div class="panel-body">
+            <div class="control-group">
+              <div class="controls" id="flash">
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label">Username</label>
+              <div class="controls">
+                <input style="margin-right: 10px;" name="username" type="text" autofocus />
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label">Password</label>
+              <div class="controls">
+                <input style="margin-right: 10px;" name="password" type="password" />
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="controls">
+                Forgot your <a href="login_recovery.html">username or password?</a>
+              </div>
+            </div>
+          </div>
+          <div class="panel-footer">
+            <input type="submit" class="btn-primary btn btn-large" value="Sign in" />
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>

@@ -1,0 +1,39 @@
+blockquote.imperative-content, blockquote.imperative-content.game, blockquote.imperative-content.mood, blockquote.imperative-content.play, blockquote.polls, blockquote.quotes {
+  padding: 8px;
+}
+
+blockquote.content.latest_poll {
+  padding: 8px;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+}
+
+blockquote p span {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif!important;
+  /* This is currently overridding inline css - not sure if this is what we want, but it remains consistent. */
+}
+
+/*blockquote.imperative-content.mood {
+  border-left: 5px solid #ae0060;
+}
+blockquote.imperative-content.play {
+  border-left: 5px solid #55a51a;
+}
+blockquote.polls {
+  border-left: 5px solid #55a51a;
+}
+blockquote.quotes {
+  border-left: 5px solid #55a51a;
+}
+blockquote.content.latest_poll {
+  border-left: 5px solid #55a51a;
+}
+blockquote.imperative-content.game {
+  border-left: 5px solid #55a51a;
+}
+blockquote.imperative-content p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 25px
+}*/
