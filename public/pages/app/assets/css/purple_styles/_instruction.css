@@ -1,0 +1,9 @@
+div.instructions{
+  font-size: 12px;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+
+.instructions label {
+  font-style: normal;
+}

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>ThinkFeelDo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+
+ 
+<link rel="stylesheet" 
+      type="text/css" 
+      href="../assets/jquery-ui/css/ui-lightness/jquery-ui-1.9.2.custom.min.css" />
+
+<link rel="stylesheet" 
+      type="text/css" 
+      href="../assets/font-awesome/css/font-awesome.min.css?update=01" />
+<link rel="stylesheet" 
+      type="text/css" 
+      href="../assets/css/fullcalendar.css?update=01" />
+<link rel="stylesheet" 
+      type="text/css" 
+      href="../assets/css/selectize.css?update=01" />
+<link rel="stylesheet" 
+      type="text/css" 
+      href="../assets/css/purple_styles/application.css?update=01" />
+
+<style>
+  .img-processing {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 250px;
+    height: 48px;
+    margin-left: -125px;
+    margin-top: -15px;
+    padding: 14px 0 2px 0;
+    border: 1px solid #ddd;
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+    background-color: white;
+  }
+
+  div#phq {
+    padding-left:40px;
+  }
+  div.responseGroup {
+    padding-left: 20px;
+  }
+</style>
+
+<script type="text/javascript" src="../assets/dynamo2/vendor/time.js?update=01"></script>
+<script type="text/javascript" src="../assets/dynamo2/vendor/date.js?update=01"></script>
+
+<script type="text/javascript" src="../assets/js/vendor/jquery-1.9.1.min.js"></script>
+
+<script type="text/javascript" src="../assets/jquery-ui/js/jquery-ui-1.9.2.custom.min.js?update=01"></script>
+<script type="text/javascript" src="../assets/js/vendor/selectize.min.js?update=01"></script>
+<script type="text/javascript" src="../assets/bootstrap/js/bootstrap.js?update=01"></script>
+<script type="text/javascript" src="../assets/js/vendor/bootstrap-tour.js?update=01"></script>
+<script type="text/javascript" src="../assets/js/bootstrap-tour-override.js?update=01"></script>
+<script type="text/javascript" src="../assets/dynamo2/vendor/underscore-1.4.4.dev.js?update=01"></script>
+<script type="text/javascript" src="../assets/dynamo2/vendor/backbone-1.0.0.dev.js?update=01"></script>
+<script type="text/javascript" src="../assets/dynamo2/vendor/knockout-2.2.min.js?update=01"></script>
+<script type="text/javascript" src="../assets/dynamo2/vendor/tee.js?update=01"></script>
+<script type="text/javascript" src="../assets/dynamo2/vendor/gauge.min.js?update=01"></script>
+<script type="text/javascript">
+  //jquery gauge plugin.
+  $.fn.gauge = function(opts) {
+    this.each(function() {
+      var $this = $(this),
+          data = $this.data();
+
+      if (data.gauge) {
+        data.gauge.stop();
+        delete data.gauge;
+      }
+      if (opts !== false) {
+
+        if (opts.donut) {
+          delete opts.donut;
+          data.gauge = new Donut(this).setOptions(opts);
+        }
+        else {
+          data.gauge = new Gauge(this).setOptions(opts);  
+        }
+        
+      }
+    });
+    return this;
+  };
+
+  $.fn.gaugeMaxValue = function(value) {
+    this.each(function() {
+      var data = $(this).data()
+      data.gauge.maxValue = value;
+    });
+    return this;
+  };
+
+  $.fn.gaugeSet = function(value) {
+    this.each(function() {
+      var data = $(this).data()
+      data.gauge.set(value);
+    });
+    return this;
+  };
+</script>
+
+<script type="text/javascript">
+// Based off the work done here:
+// http://www.jscraft.net/experiments/horizontal-bar-graph-with-css3-and-jquery.html 
+$.fn.horizontalBarGraph = function(){
+  
+  this.each(function() {
+    
+    var 
+    $el          =   $(this), 
+    elWidth      =   $el.width(),
+    $circle      =   $el.find('.circle'),
+    $percentage  =   $el.find('.percent span'),
+    $valueEl     =   $circle.find('.value'),
+    val          =   parseInt($valueEl.data("value"));
+
+    if (val >=0 && val <= 100){
+
+      var barWidth = 100-val;
+            
+      $percentage.animate({ width: barWidth+'%' });
+      $circle.animate({ left: (50+'%') }, function(){ $circle.removeClass("rotate") }).addClass("rotate"); 
+
+      $el.on("click", function() {
+        $percentage.css("width", "100%");
+        $percentage.animate({ width: barWidth+'%' });
+        $circle.css("left", "-1%");
+        $circle.animate({ left: (50+'%') }, function(){ $circle.removeClass("rotate") }).addClass("rotate");  
+      });
+      
+    }
+    else {
+      new Error("Improper Value for Bargraph: ", val, "; should be between 0 and 100");
+    };
+
+  });
+  
+};
+</script>
+
+<script type="text/javascript" src="../assets/js/our_knockout_extensions.js?update=01"></script>
+<script type="text/javascript" src="../assets/js/backbone_knockout_view.js?update=212"></script>
+<script type="text/javascript" src="../assets/js/backout.js?update=01"></script>
+
+<script type="text/javascript" src="../../config.js?update=01"></script>
+<script type="text/javascript" src="../../define_environment.js?update=01"></script>
+
+<script type="text/javascript" src="../assets/dynamo2/_templates.js?update=01"></script>
+<script type="text/javascript" src="../assets/templates/app_templates.min.js?update=01"></script>
+
+<script type="text/javascript" src="../assets/dynamo2/Core.js?update=01"></script>
+<script type="text/javascript"> Dynamo.TriremeURL = Config[ENVIRONMENT].TriremeURL </script>
+<script type="text/javascript" src="../assets/dynamo2/Core.Models.js?update=01"></script>
+<script type="text/javascript"> Dynamo.XelementClass = eval(Config[ENVIRONMENT].DynamoXelementClass); </script>
+<script type="text/javascript" src="../assets/dynamo2/Core.Collections.js?update=01"></script>
+<script type="text/javascript" src="../assets/dynamo2/Core.Views.js?update=01"></script>
+
+<script type="text/javascript" src="../assets/dynamo2/Application.Models.js?update=01"></script>
+<script type="text/javascript" src="../assets/dynamo2/Application.Views.js?update=01"></script>
+
+<script type="text/javascript" src="../assets/dynamo2/Questions.Models.js?update=01"></script>
+<script type="text/javascript" src="../assets/dynamo2/Questions.Collections.js?update=01"></script>
+<script type="text/javascript" src="../assets/dynamo2/Questions.Views.js?update=01"></script>
+
+<script type="text/javascript" src="../assets/dynamo2/Guides.Models.js?update=01"></script>
+<script type="text/javascript" src="../assets/dynamo2/Guides.Collections.js?update=01"></script>
+<script type="text/javascript" src="../assets/dynamo2/Guides.Views.js??update=01"></script>
+
+<script type="text/javascript" src="../assets/js/vendor/fullcalendar.js?update=01"></script>
+<script type="text/javascript" src="../assets/js/vendor/highcharts/highcharts.js?update=01"></script>
+
+<!-- Site Assets -->
+<script type="text/javascript" src="../assets/js/mohrlab_utility.js?update=01"></script>
+
+<script data-main="../assets/js/app_start.js" src="../assets/js/vendor/require.js"></script>
+    
+</head>
+
+<body>
+  <!-- Top Navigation -->
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container-fluid">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <a id="home-link" class="brand cbits" href="#"><i class="icon-home"></i> <em>ThinkFeelDo</em></a>
+        <div class="nav-collapse collapse navbar-inverse-collapse">
+          <ul class="nav">
+            <li><button class="cbits page_tour link"><i class="icon-play"></i> Page Tour</button></li>
+          </ul>
+          <ul class="nav pull-right">
+            <li><span id="signed_in_username"></span></li>
+            <li><a href="#edit_profile"> <i class="icon-edit-sign"></i> Contact Info</a></li>
+            <li><a id="logout" href="#logout"> <i class="icon-signout"></i> Log out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="site-flash-container"></div>
+  <div id="main" class="container-fluid"></div>
+
+  <div id="loading-data-message" class="img-processing" style="">
+    <!-- Div removed once js loading is complete -->
+    Loading Your Data...
+  </div>
+</body>
+</html>
