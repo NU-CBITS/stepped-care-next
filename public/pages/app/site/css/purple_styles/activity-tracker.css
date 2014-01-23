@@ -1,0 +1,193 @@
+.slider-bar {
+  margin-left: 10%;
+  width:70%;display: inline-block;
+}
+.slider-number {
+  width:15%;display: inline-block;
+}
+form.inline, div.inline {
+  display:inline-block;
+}
+.text-center {
+  text-align:center;
+}
+.form-condensed label.checkbox {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.form-horizontal .control-label {
+  width: 60px;
+}
+.form-horizontal .controls {
+  margin-left: 80px;
+}
+.form-horizontal .emotion-tags .control-label{
+  width: 100px;
+}
+.form-horizontal .emotion-tags .controls {
+  margin-left: 120px;
+}
+.alert {
+  padding: 8px 14px 8px 14px;
+}
+.label-alert {
+  background-color: #FCF8E3;
+  border: 1px solid #FBEED5;
+}
+.input-tag {
+  margin:5px;
+}
+.input-tag input {
+  margin:0px;
+}
+button i.icon-ok {
+  color:#468847;
+}
+#visualizations-container.widget-content {
+  padding-top:10px;
+}
+#visualizations.btn-toolbar {
+  margin-top:0px;
+}
+#filters-container {
+  position:relative;
+}
+#filters.popover {
+  display:none;
+  width: inherit;
+  position: absolute;
+  margin-top: 0px;
+}
+#filters.popover .arrow {
+  left: 96%;
+}
+
+/*#viz-list-container {
+  position:relative;
+}
+#viz-list.popover {
+  display   : none;
+  width     : inherit;
+  position  : absolute;
+  margin-top: 0px;
+}
+#viz-list.popover .arrow {
+  left: 86%;
+}*/
+
+#viz-list {
+  background-color:#f88529;
+  color:white;
+}
+
+a#show-viz-list-container {
+  text-decoration: none!important;
+  color: white!important;
+}
+
+a#show-viz-list-container:hover {
+  text-decoration: none!important;
+  color: white!important;
+}
+
+a#show-viz-list-container b.caret{
+  border-top-color: white!important;  
+  margin-top: 18px;  
+}
+
+#viz-list li {
+  margin-left:10px;
+}
+
+#edit-event-form .slider-container {
+  width:95%;
+  display:inline-block;
+  padding:10px;
+}
+#edit-event-form .slider.ui-slider.ui-slider-horizontal.ui-widget.ui-widget-content.ui-corner-all {
+  width:85%;
+}
+#edit-event-form .intensity-value {
+  padding-right:15px;
+}
+
+
+.shared_activity .name {
+  font-size:24px;
+  font-weight:bold;
+}
+
+/*.shared_activity .start-time {
+  background-color: black;
+  color:white;
+}
+*/
+.activities .num-shared {
+  font-size: 1.15em;
+  padding:2px 6px!important;
+  border-radius: 6px!important;
+}
+
+.activities .name {
+  font-size: 1.35em;
+  font-weight: bold;
+}
+
+.shared_activity .summary {
+  /*margin-top: 20px;*/
+}
+
+.shared_activity .sentiment-comparison {
+  /*margin-top: 5%;*/
+}
+
+/*.shared_activity .delete {
+  padding:0 3px;
+  margin-top:-20px;
+  margin-right:-15px;
+}*/
+
+.shared_activity .title {
+  font-size:20px;
+}
+
+.shared_activity .completion-status {
+  font-variant:small-caps;
+}
+
+.shared_activity .motivation {
+  font-style:italic;
+}
+
+.shared_activity .tags {
+  color: #52b9e9;
+}
+
+.shared_activity .text-value {
+  font-size:1.5em;
+  font-weight: bold;
+}
+
+.shared_activity .value-label {
+  font-size:1.5em;
+}
+
+.shared_activity canvas {
+  width: 100%;
+}
+
+.shared_activity .emotion {
+  font-size:1.5em;
+  text-align: center;
+  line-height:40px;
+}
+
+.user-collections.preview {
+  max-height:300px;
+  overflow: hidden;
+}
+
+.user-collections.show {
+  max-height:auto;
+  overflow: auto;
+}

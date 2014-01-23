@@ -1,0 +1,1078 @@
+/*!
+ * CBITS v0.0.2
+ *
+ * Designed and built with a goal of world peace.
+ */
+@import "bootstrap/css/bootstrap-wo-icons.css";
+@import "bootstrap/css/bootstrap-responsive.css";
+@import "light-blue/css/application-white.css";
+@import "./font_awesome/css/font-awesome.min.css";
+@import "_comments.css";
+@import "_content.css";
+@import "_imperative-content.css";
+@import "_instruction.css";
+@import "_profile.css";
+@import "activity-tracker.css";
+@import "admin-panel.css";
+@import "dhtmlx-override.css";
+@import "filter-overlay-container.css";
+@import "guide-editor.css";
+@import "guides.css";
+@import "horizontal_bar_graph.css";
+@import "input-group-template.css";
+@import "nw-text-colors.css";
+@import "our-full-calendar.css";
+@import "our-tour.css";
+@import "_cbits_theme.css";
+
+.popover.double-wide {
+  width: 80%!important;
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.ui-widget,
+.ui-dialog-content,
+.ui-widget-content {
+ font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important; 
+}
+
+.select-multiple label {
+  margin-bottom:0px;
+}
+
+div.responseGroup div.radio_group {
+  background-color:white;
+  border-radius:5px;
+  color:black!important;
+  padding:10px 5px;
+}
+
+div.responseGroup div.radio_group label {
+
+  label:5px 10px;
+  clear:none;
+}
+
+div.responseGroup div.radio_group input {
+
+  margin:0 5px 5px 5px;
+
+}
+
+div.urgent {
+  background-color: red;
+  color:white;
+}
+
+div.unread {
+  background-color: #9bd0f6;
+  color:white;
+}
+
+div.read {
+  background: none;
+  color:black;
+}
+
+div#flash-container {
+  margin: auto;
+  margin-top:50px;
+  width:80%;
+  overflow:auto;
+  border-radius: 5px;
+  z-index: 9999999;
+}
+
+div#flash-container .success {
+  background-color: gray;
+  padding: 15px;
+
+}
+div#flash-container .warn {
+  background-color: #f7d840;
+  padding: 15px;
+}
+div#flash-container .error {
+  background-color: #F2DEDE;
+  padding: 15px;
+}
+
+div#coach-conversation {
+  margin-top:20px;
+}
+
+div#new-conversation #new-post {
+  float: left;
+  border-radius: 1px;
+  margin-left: 20px;
+  width:39%;
+  min-height:48px;
+}
+
+strong.lead {
+  font-weight: bold
+}
+
+div.list-block {
+  padding: 0 0 0 15px;
+  margin: 0 0 20px;
+  border-left: 5px solid #eeeeee;
+}
+
+div#activity-feed-container {
+  padding:10px 20px;
+}
+
+/*in assessment maker*/
+.show_container.widget div.instruction {
+  font-weight: bold;
+}
+
+img.user-image {
+  background: #0068AC;
+}
+
+
+strong.user-name {
+  color:#810262;
+}
+
+strong.user-byline:before {
+  content: '\2014 \00A0';
+}
+
+hr.small {
+  margin:10px 0px;
+}
+
+input.input-xmini {
+  width: 40px;
+}
+
+.btn.active {
+  background-color:#C0C0C0;
+}
+.btn-like {
+  border-radius: 500px;
+}
+
+.link {
+  color: #0088cc;
+  text-decoration: none;
+}
+
+.link:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.navbar li >.link {
+  text-decoration: none;
+  background: none;
+  border: none;
+
+  height: auto;
+  line-height: inherit;
+  text-align: inherit;
+}
+
+.navbar li > .link {
+  display: block;
+  float: none;
+  color: rgb(153, 153, 153);
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  text-shadow: rgba(0, 0, 0, 0.247059) 0px -0.9090908765792847px 0px; 
+}
+
+.navbar-inverse .link:hover {
+  color:white;
+}
+
+button.thumbs-up {
+  color:#3A87AD;
+  margin-right:5px;
+}
+
+div.label_and_input {  
+  display:block; 
+  width:95%; 
+  margin: 0 auto 0.1em auto; 
+  padding: 0.5em 0; 
+  border: 1px solid #999; border-radius: 5px; -moz-border-radius: 5px; 
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);  
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3); 
+  
+  font-size:1em;
+  text-align:left;
+  color:#1e497c;
+  background-color:#FFFFFF;
+}
+ul#goals {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+ul#goals li div.list-item {
+  margin:10px;
+}
+
+hr.divider-prog-pink {
+  border-bottom: 2px solid #ae0060;
+  margin:10px 0px;
+}
+
+/* summary items */
+.summary-item-container {
+  margin-bottom: 20px;
+  padding-bottom:20px;
+  border-bottom: 1px solid #E3E3E3;
+}
+.summary-content-container {
+  padding: 10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: white;
+  /*border-bottom: 1px solid #E3E3E3;*/
+}
+.summary-content-container img {
+  margin-right:10px;
+}
+.summary-item-container  [class^="icon-"] {
+  line-height: 30px;
+  font-size: 25px;
+  color:white;
+  /*text-shadow: 4px 4px 5px #888;*/
+}
+.thought-summary {
+  background: #fee727;
+  /*color:white;*/
+}
+.lesson-summary {
+  background: #00B1C9;
+  color:white;
+}
+.connect-summary {
+  background: #55a51a;
+  color:white;
+}
+.mood-summary {
+  background: #ae0060;
+  color:white;
+}
+.do-summary {
+  background: #fa6801;
+  color:white;
+}
+
+/* Lesson */
+.lesson-item {
+  border-left: 10px solid #00b1c0;
+  background-color: #eeeeee;
+}
+
+/* Do */
+.do-item {
+  border-left: 10px solid orange;
+  background-color: #eeeeee;
+}
+#poll-responses li {
+  list-style-type:none;
+}
+
+/* 'former' heading stuff */
+h2 .h2-header {
+  font-size: 24px;
+  font-weight: 200;
+  letter-spacing:2px;
+}
+.accordion-header h2, #goals-accordion-header h2 {
+  cursor: pointer;
+  border-bottom: none;
+}
+
+.caret-icons i {
+  line-height:30px;
+  font-size:20px;
+  padding-right: 5px;
+  color:#696969;
+}
+
+.h2-move {
+  cursor: move;
+}
+i.icon-move {
+  cursor: url(https://mail.google.com/mail/images/2/openhand.cur), default !important;
+}
+iframe#guided-page {
+  width: 100%;
+  min-height:600px;
+}
+#to-do-body, #guides-body {
+  display:block;
+}
+ul#goals.accordion-body {
+  overflow-y: scroll;
+  max-height: 200px;
+}
+.caret {
+  color: #555;
+}
+
+.inline {
+  display:inline;
+}
+
+.well-white {
+  background-color: white;
+  border:none;
+  box-shadow: none;
+}
+
+.text-large {
+  font-size: 17.5px;
+  line-height: 20px;
+}
+
+form.form-condensed .control-group {
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+.show-prediction {
+  font-weight: bold
+}
+
+.show-prediction:before {
+  content: '\2014 \00A0';
+  font-weight: bold
+}
+
+/*pagination*/
+a.page-prev i {
+  /*match font-size*/
+  height:18px; 
+}
+a.page-next i {
+  /*match font-size*/
+  height:18px;
+}
+
+/* buzz/bolt */
+
+a.buzz i.icon-bolt, a#buzz-user i.icon-bolt {
+  color:#d9d9d9;
+}
+
+a.buzz:hover, a#buzz-user:hover {
+  text-decoration: none;
+}
+
+a.buzz:hover i.icon-bolt, a#buzz-user:hover i.icon-bolt {
+  color:#ffff01;
+}
+
+.icon-cbits-connect {
+  color:#43c83c;
+}
+
+.icon-cbits-think-feel {
+  color:#932ab6;
+}
+
+.icon-cbits-do {
+  color:#f88529;
+}
+.icon-cbits-learn {
+  color:#52b9e9;
+}
+.icon-cbits-mood {
+  color:#fa3031
+}
+.icon-cbits-people {
+  color:#1171a3;
+}
+
+/*
+ ----------------- Added by Gabe -----------------------
+*/
+
+
+/*
+Used everywhere
+*/
+div#main {
+  margin-top:60px;
+};
+
+.widget-tiles {
+  max-height:600px;
+}
+
+button.buzz i{
+  color: black!important;
+}
+button.buzz:hover i{
+  color: white!important;
+}
+button.buzz:hover {
+  color: white!important;
+  background-color: #222222;
+  background-position: 0 -60px;
+}
+
+/*
+ Used on thought tracker tool
+*/
+.ui-dialog.thought-record-editor .ui-widget-header {
+  background-image: none!important;
+  border: 1px solid #932ab6!important;
+  color: white!important;
+}
+
+/*
+ Used on activity tracker tool
+*/
+.ui-dialog.activity-editor .ui-widget-header {
+  background-image: none!important;
+  background-color: #f88529!important;
+  border: 1px solid #f88529!important;
+  color: white!important;
+}
+
+/*
+  Used on Edit Profile Page
+*/
+#edit-profile .question {
+  margin-top: 40px;
+}
+
+#edit-profile .question .content {
+  font-size: 20px;
+}
+
+#edit-profile .responseGroup input {
+  width:80% ;
+}
+
+#edit-profile .responseGroup textarea {
+  width:80% ;
+}
+
+
+/*
+ Used on home page for user widgets and buzzing
+*/
+
+.user-widget.widget-header.recently-visited {
+  background-color: #1171a3;
+  /*border: 1px solid #1171a3;*/
+}
+
+.user-widget.widget-content.recently-visited {
+  color: #1171a3;
+}
+
+.user-widget.widget-header.gone-away {
+  background-color: #f88529;
+  /*border: 1px solid #f88529;*/
+}
+
+.user-widget.widget-content.gone-away {
+  color: #f88529;
+}
+
+.user-widget.widget-header.long-gone {
+  background-color: #5e2121;
+  /*border: 1px solid #5e2121;*/
+}
+
+.user-widget.widget-content.long-gone {
+  color: #5e2121;
+}
+
+/**/
+#num-ne w-events {
+  line-height:1.75;
+}
+
+.choose_element:hover { 
+  cursor: hand; 
+  cursor: pointer; 
+}
+
+/* Roadmap */
+#roadmap .day.list-group-item:first-child {
+  /* this is here b/c currently it isn't within a panel the way bootstrap declares */
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+}
+
+/* lessons = light-blue */
+
+.lessons-container {
+  height:100%;
+}
+
+.lessons .widget-header {
+  background-color: #52b9e9;
+  border: 1px solid #52b9e9;
+}
+
+.lessons .widget-header > div {
+  color: white;
+}
+
+/* activities = orange */
+.activities .widget-header {
+    background-color: #f88529;
+    border: 1px solid #f88529;
+}
+.activities .widget-header > div {
+  color:white;
+}
+
+/* thoughts = purple */
+.thoughts .widget-header {
+  background-color: #932ab6;
+  border: 1px solid #932ab6;
+}
+.thoughts .widget-header > div {
+  color:white;
+}
+
+/* panels */
+
+.homepage-widget {
+  padding: 18px;
+}
+
+.panel-heading {
+  padding-left:10px;
+  padding-right:10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.panel-heading h1.panel-title,
+.panel-heading h2.panel-title,
+.panel-heading h3.panel-title,
+.panel-heading h4.panel-title,
+.panel-heading h5.panel-title,
+.panel-heading h6.panel-title {
+  line-height: 1.1;
+  font-weight: 500;
+}
+
+.panel-thoughts > .panel-heading {
+  background-color: #932ab6;
+  border: 1px solid #932ab6;
+  color:#FFFFFF;
+}
+
+.panel-thoughts .panel-heading .nav a, .panel-purple .panel-heading .nav a {
+  color:#FFFFFF;
+}
+
+.panel-thoughts .panel-heading .nav .dropdown-toggle .caret, .panel-purple .panel-heading .nav .dropdown-toggle .caret {
+  border-top-color: #FFFFFF;
+  border-bottom-color: #FFFFFF;
+}
+
+.panel .panel-heading .nav {
+  display: inline-block;
+  margin-bottom:0px;
+  float:right;
+}
+
+.panel .panel-heading .nav > li > a:hover{
+  text-decoration:none;
+  background-color:transparent;
+}
+
+.panel .panel-heading .nav .dropdown-toggle:hover .caret{
+  border-top-color:inherit;
+  border-bottom-color:inherit;
+}
+
+/*ARG*/
+.panel .list-group .list-group-item:first-child {
+/*  border-top-right-radius: 0;
+  border-top-left-radius: 0;*/
+}
+
+.panel .list-group .list-group-item:last-child {
+  /*border-bottom: 0;*/
+}
+
+.panel .list-group .list-group-item {
+  /*border-width: 1px 0;*/
+}
+.panel .list-group {
+  /*margin-bottom: 0;*/
+}
+
+/* End of Arg */
+
+/* roadmap */
+#roadmap.list-group .list-group-item:first-child,
+#activity-feed-container .list-group .list-group-item:first-child {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+#roadmap.list-group .list-group-item:last-child,
+#activity-feed-container .list-group .list-group-item:last-child {
+  border-bottom: 0;
+
+}
+
+/* comments */
+.comments.list-group .list-group-item:first-child {
+  border-top: 0px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+.comments.list-group .list-group-item:last-child {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.comments.list-group .list-group-item {
+  border-right: 0px;
+  border-left: 0px;
+}
+
+/*general*/
+.list-group .list-group {
+  margin-left:0px;
+}
+
+.list-group-item h4{
+  /*font-size: 2em;*/
+  /*font-weight: bold;*/
+}
+
+.list-group-item p {
+/*  font-size: 1.1em;
+  margin-left: 20px;
+  margin-top: 10px;
+  line-height: 1.5em;
+  font-style: italic;*/
+}
+
+/* ROAD MAP */
+
+
+/* Container of one roadmap week */
+.roadmap-week {
+/*  margin:5px 0px;
+  padding:0px 4px;*/
+}
+
+
+/* in case you want to style past weeks in some way */
+.roadmap-week .past {
+ 
+}
+
+/* how you style the current week */
+.roadmap-week .current {
+  background: lightgray;
+}
+
+/* in case you want to style future weeks in some way */
+.roadmap-week .future {
+ 
+}
+
+/* div that contains "Learn Practice Interact" row */
+.roadmap-week .header {
+  /*text-align: center;*/
+}
+
+/* container for the rows within a week */
+.roadmap-week .entries {
+  /*text-align: left;*/
+}
+
+/* container of an individual row */
+/*.roadmap-item {
+  margin:2px 0px;
+  padding:0;
+  border-bottom: 1px solid;
+  font-weight: bold;
+}*/
+
+/* container of the lesson and title together */
+.roadmap-item .learn {
+  /*padding: 2px 4px;*/
+  /*color: blue;*/
+  color: #428bca;
+}
+
+/* container of the lesson's title text */
+.roadmap-item .learn .title {
+  /*margin-bottom:2px;*/
+  color: black;
+  font-weight: bold;
+}
+
+/* container of the summary text */
+.roadmap-item .learn .summary {
+  /*margin-left: 4px;*/
+  color: #666;
+  /*font-weight: normal;*/
+  font-style: italic;
+}
+
+/* container of the tool to be used */
+.roadmap-item .tool {
+/* margin:0;
+ padding: 2px 4px;*/
+ /*color:orange;*/
+ color: #f0ad4e;
+ /*text-align: center;*/
+}
+
+/* container of the activity texts */
+.roadmap-item .activity {
+  /*margin:0;*/
+  /*color:green;*/
+  color: #5cb85c;
+
+}
+
+/* Added by Jem for template implementation */
+
+#thought-heading {
+  padding-bottom: 20px;
+}
+
+#main-site-container {
+  margin-top: 20px;
+}
+
+#main-content {
+  margin-left:20px;
+}
+
+.icon-dark {
+  color: #9bd0f6;
+}
+
+.table-head-underline {
+  border-bottom: 1px solid white;
+}
+
+div#coach-container {
+  z-index: 10;
+  position: fixed;
+  bottom: 0px;
+  padding-left:20px;
+  height: 100%;
+  width:80%;
+  padding-left: 60px;
+}
+
+div#coach-container.opened {
+  right:0vw; 
+  overflow: scroll;
+
+}
+
+div#coach-container.closed {
+  right:-80%;
+  overflow: inherit;  
+}
+
+div#coach-conversation {
+  min-width:300px;
+  width:100%;
+  overflow:hidden;
+}
+
+div#my-coach-panel {
+  cursor: pointer;
+  position: relative;
+  left:-141px;
+  top: 151px;
+/*  border-radius: 5px 0px 0px 5px;
+*/  height: 60px;
+  border-left: 10px solid rgba(90, 135, 160, 0.89);
+  border-top: 10px solid rgba(90, 135, 160, 0.89);
+  border-bottom: 10px solid rgba(90, 135, 160, 0.89);
+  background-color: white;
+  color: #9bd0f6;
+  line-height: 2;
+  border-right: none; 
+}
+div#my-coach-panel.opened {
+  left: -53px;
+
+}
+
+div#my-coach-panel span {
+  position: absolute;
+  top: 17%;
+  left: 8px;
+}
+
+div.coach-well {
+  border-radius: 5px 0px 0px 5px;
+  padding: 20px;
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjEwJSIgY3k9IjAiIHI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9InJnYmEoNzQsIDEyMSwgMTQ3LCAwLjg5KSIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSJyZ2JhKDIyNiwgMjI2LCAyMjYsIDAuODcpIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSJyZ2JhKDE4NSwgMTM1LCAxMzEsIDAuODcpIi8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4="), url("../img/bgnoise_lg_dark.png");
+  background-color: rgba(74, 121, 147, 0.89);
+  background: radial-gradient(farthest-side ellipse at 10% 0, rgba(74, 121, 147, 0.89), rgba(204, 204, 204, 0.85) 60%, rgba(185, 135, 131, 0.87) 120%), url("../img/bgnoise_lg_dark.png");
+  background: -webkit-radial-gradient(10% 0, farthest-side ellipse, rgba(74, 121, 147, 0.89), rgba(204, 204, 204, 0.85) 60%, rgba(185, 135, 131, 0.87) 120%), url("../img/bgnoise_lg_dark.png");
+  background: -moz-radial-gradient(10% 0, farthest-side ellipse, rgba(74, 121, 147, 0.89), rgba(204, 204, 204, 0.85) 60%, rgba(185, 135, 131, 0.87) 120%), url("../img/bgnoise_lg_dark.png");
+}
+
+
+th.review-events-header {
+/*  color: #999;
+*/}
+
+.ui-widget-content {
+  background: none;
+  background-color: rgba(108, 108, 108, .93);
+}
+.control-label {
+  color: gray;
+}
+#edit-pleasure-predict-attribute-container {
+  color: #9bd0f6;
+}
+#edit-accomplishment-predict-attribute-container{
+    color: #9bd0f6;
+}
+.fc-header-title h2 {
+  color: white;
+}
+
+div#posts {
+  padding: 15px;
+  border-radius: 5px 5px 0px 0px;
+  margin-left: 0px;
+}
+
+span.last-comment {
+  color: #9bd0f6;
+}
+
+div.post {
+  padding:       10px 5px;
+  min-height:    30px;
+  border-bottom: 1px solid white;
+  margin-bottom: 5px;
+}
+
+div.post:hover {
+  cursor: pointer;
+}
+
+div.post span {
+  overflow: auto;
+}
+
+div.text  {
+  clear:    both;
+  padding-top:  5px;
+  padding-bottom: 5px;
+}
+
+div.post.selected {
+  background-color:white;
+  color:black;
+}
+
+div.post.selected span.last-comment {
+  color:black;
+}
+
+div#current-post {
+  margin-left: 16px;
+  padding: 15px;
+}
+
+div#current-post div.text {
+  background-color:white;
+  border-radius:5px;
+}
+
+button#submit-post {
+  margin-top: -20px;
+}
+h3.message-header {
+  border-bottom: 1px solid white;
+  padding-left: 20px;
+  color: #666;
+}
+.message {
+  padding: 18px;
+  border-left: 3px solid #666;
+}
+#new-comment-field  {
+  float:left;
+  border-radius: 1px;
+}
+.chat-pic {
+}
+.close-message {
+  color: #999999;
+}
+.pad {
+  margin-top: -5px;
+  margin-right: -11px;
+}
+
+.comment-list-item {
+  margin-bottom: -30px;
+}
+
+.add_comment {
+  width: 90%;
+  margin: auto;
+  margin-top: -10px;
+}
+
+#visualizations-navigation {
+  z-index: 1;
+}
+
+.lesson-panel {
+  background-color: white;
+  color: black;
+}
+
+#current-guide-slide-content h3 {
+  color: black;
+}
+
+#current-guide-slide-content ul {
+  margin-left: 20px;
+}
+
+/*override template*/
+
+a.list-group-item.active > .badge,
+.nav-pills > .active > a > .badge {
+  color: #9bd0f6;
+}
+
+.nav-pills > li > a > .badge {
+  margin-left: 3px;
+}
+
+.list-group-item {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  margin-bottom: -1px;
+}
+.list-group-item:first-child {
+  border-top-right-radius: 1px;
+  border-top-left-radius: 1px;
+}
+.panel-title > a {
+  color: #666;
+}
+
+.panel-footer {
+  padding: 10px 15px;
+  border-top: 1px solid #dddddd;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+.popover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1010;
+  display: none;
+  padding: 1px;
+  text-align: left;
+  background-clip: padding-box;
+  border: 1px solid #cccccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+}
+.panel {
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.panel .panel-heading a {
+  color: #f8f8f8;
+  font-weight: 300;
+  color: white;
+}
+.fc-state-disabled .fc-button-inner {
+  color: #999;
+}
+
+.fc-state-disabled {
+  cursor: default;
+}
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+  color: white;
+  font-weight: 300;
+}
+.panel-heading h1 {
+  color: white;
+  font-weight: 300;
+}
+
+h1 i {
+  color: white !important;
+}
+
+button i {
+  color: white !important;
+}
+
+.orange {
+  color: white !important;
+}
+.panel-default > .panel-heading {
+  background-color: white;
+}
+
+body {
+  background: url('../img/farmer.png');
+}
+
+.contact h1, i {
+  color: #666 !important;
+}
+.contact h1 {
+  color: #666 !important;
+}
+
+.panel-heading {
+  border: none !important;
+}
+
+.ui-widget-header {
+  background: #52b9e9 !important;
+  border: none;
+}
+.ui-widget-content {
+  background-color: white;
+}
+.ui-dialog.activity-editor .ui-widget-header {
+  background: #52b9e9 !important;
+  border: none;
+}
+
+button.lesson-index i {
+  color: #52b9e9 !important;
+}
+button.finished i {
+  color: #52b9e9 !important;
+}

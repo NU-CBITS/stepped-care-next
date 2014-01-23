@@ -1,0 +1,12 @@
+.save_status.saving-changes {
+  /* label-info */
+  background-color: #3a87ad;
+}
+.save_status.unsaved_changes {
+  /* label-warning */
+  background-color: #f89406;
+}
+.save_status.current {
+  /* label-success */
+  background-color: #468847;
+}
