@@ -1,0 +1,90 @@
+/*
+From : http://www.jscraft.net/experiments/horizontal-bar-graph-with-css3-and-jquery.html;
+
+Accompanying HTML:
+
+<div class="bar">
+	<div class="percent">
+		<span style="width: 100%;"></span>
+	</div>
+	<div class="circle">
+		<span>0%</span>
+	</div>
+</div>	
+
+;
+*/
+.bargraph.bar {
+	float:left;
+	clear:both;
+	width:100%;
+	height:20px;
+	position:relative;
+}
+
+.bargraph .percent {
+	background:#2caedd;
+	background:-moz-linear-gradient(left, #2caedd 0%, #86dd2a 28%, #e0d72a 46%, #e8902c 66%, #ed2d2d 86%, #ff0000 100%);
+	background:-webkit-gradient(linear, left top, right top, color-stop(0%,#2caedd), color-stop(28%,#86dd2a), color-stop(46%,#e0d72a), color-stop(66%,#e8902c), color-stop(86%,#ed2d2d), color-stop(100%,#ff0000));
+	background:-webkit-linear-gradient(left, #2caedd 0%,#86dd2a 28%,#e0d72a 46%,#e8902c 66%,#ed2d2d 86%,#ff0000 100%);
+	background:-o-linear-gradient(left, #2caedd 0%,#86dd2a 28%,#e0d72a 46%,#e8902c 66%,#ed2d2d 86%,#ff0000 100%);
+	background:-ms-linear-gradient(left, #2caedd 0%,#86dd2a 28%,#e0d72a 46%,#e8902c 66%,#ed2d2d 86%,#ff0000 100%);
+	background:linear-gradient(left, #2caedd 0%,#86dd2a 28%,#e0d72a 46%,#e8902c 66%,#ed2d2d 86%,#ff0000 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2caedd', endColorstr='#ff0000', GradientType=1);
+	float:left;
+	width:100%;
+	top:50%;
+	height:20px;
+	position:relative;
+}
+
+.bargraph  .percent span {
+	display:block;
+	position:absolute;
+	top:0;
+	right:0;
+	z-index:2;
+	width:100%;
+	height:20px;
+	background:rgba(255, 255, 255, .7);
+}
+
+.bargraph  .circle {
+	display:block;
+	position:absolute;
+	top:100%;
+	left:0;
+	z-index:3;
+	margin:-15px 0 0 -15px;
+	width:30px;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	font-size:10px;
+	font-family:'PT Sans Narrow', sans-serif;
+	color:#fff;
+	background:rgba(0, 0, 0, .1);
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius:15px;
+	-webkit-transition:all 1s ease;
+	-moz-transition:all 1s ease;
+	-o-transition:all 1s ease;
+}
+
+.bargraph  .circle.rotate {
+	-webkit-transform:rotate(1080deg);
+	-moz-transform:rotate(1080deg);
+	-o-transform:rotate(1080deg);
+}
+
+.bargraph .circle span {
+	display:inline-block;
+	width:20px;
+	height:20px;
+	line-height:20px;
+	background:rgba(0, 0, 0, .3);
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+}

@@ -1,0 +1,20 @@
+.admin_dialog {
+  position: fixed;
+  top: 300px;
+  right: 0px;
+  background-color: #520063;
+  color:white;
+  padding:5px;
+  z-index:1000;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.admin_dialog .label_and_input {
+  border-radius: 0px!important;
+  padding:3px;
+}
+.admin_dialog .label_and_input + .label_and_input {
+  margin-top: 0px; 
+}
