@@ -11,3 +11,4 @@ config/initializers/secret_token.rb
 .DS_Store
 
 public/pages/authentication_assets
+public/pages/content_assets
