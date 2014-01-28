@@ -1,10 +1,16 @@
 class Legacy::XelementsController < Legacy::ApiController
   def index
-    render file: '/Users/ericcf/work/stepped-care/xelements.json'
+    @slides = Slide.all
   end
 
   def show
-    render json: {}
+    guid = params[:xelement_guid]
+    xelement = (Slide.where(guid: guid).first ||
+      Question.where(guid: guid).first ||
+      Guide.where(guid: guid).first ||
+      QuestionGroup.where(guid: guid).first
+    )
+    render json: xelement
   end
 
   def create

@@ -95,10 +95,10 @@ GuideModel = Dynamo.GuideModel = Dynamo.XelementClass.extend({
         return;        
       };
 
-      AllSlides.once("sync", function() {
+      /*AllSlides.once("sync", function() {
         console.log("Universal Slides Collection Synced, triggering slides rebuild.");
         this.buildSlides();
-      }, this);
+      }, this);*/
       AllSlides.fetch();
 
       return;
