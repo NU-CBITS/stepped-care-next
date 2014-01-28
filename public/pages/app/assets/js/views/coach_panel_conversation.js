@@ -315,7 +315,6 @@ define(["lib/appHelper", "views/comments_view"],
       this.postsCollection.comparator = this.timeOfLastComment;
       this.postsCollection.sort();
       
-      debugger;
       var numberUnread = 0;
       this.postsCollection.each(function(post, index) {
             

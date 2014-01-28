@@ -14,8 +14,8 @@ requirejs.config({
       "app_xelement"  : "../../../content_assets/app_xelement",
       "roadmap"       : "../../../content_assets/roadmap_gsheet",
       "xelements"     : "../../../content_assets/xelements"
-    },
-    urlArgs: "cacheBust=" +  (new Date()).getTime()
+    }//,
+    //urlArgs: "cacheBust=" +  (new Date()).getTime()
 });
 
 require([ "app" ], function( app ) { 
