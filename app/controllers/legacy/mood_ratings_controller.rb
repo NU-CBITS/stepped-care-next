@@ -4,19 +4,31 @@ class Legacy::MoodRatingsController < Legacy::ApiController
   end
 
   def create
-    @mood_rating = MoodRating.new(
-      user_id: params[:user_id],
-      rating: params[:values][0]
-    )
+    @mood_rating = MoodRating.new(rating_params)
 
-    unless @mood_rating.save
+    if @mood_rating.save
+      render 'create', status: 201
+    else
       render json: { status: 'error' }, status: 400
     end
   end
 
   def update
-    @mood_rating = MoodRating.find(guid: params[:mood_rating_guid])
+    @mood_rating = MoodRating.where(guid: params[:mood_rating_guid]).first
 
-    asdf
+    if !@mood_rating
+      render json: { status: 'not found' }, status: 404
+    elsif !@mood_rating.update(rating_params)
+      render json: { status: 'error' }, status: 400
+    end
+  end
+
+  private
+
+  def rating_params
+    {
+      user_id: params[:user_id],
+      rating: params[:values][0]
+    }
   end
 end

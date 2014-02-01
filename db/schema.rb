@@ -11,15 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140127182527) do
+ActiveRecord::Schema.define(version: 20140201032259) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "app_events", force: true do |t|
+    t.string   "user_guid"
+    t.string   "page"
+    t.string   "action"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "conversation_posts", force: true do |t|
-    t.string   "group_id"
     t.string   "transmitted_at"
-    t.string   "user_id"
+    t.string   "user_guid"
     t.string   "text"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -47,6 +54,7 @@ ActiveRecord::Schema.define(version: 20140127182527) do
   end
 
   create_table "mood_ratings", force: true do |t|
+    t.string   "guid"
     t.integer  "rating"
     t.string   "user_id"
     t.datetime "created_at"

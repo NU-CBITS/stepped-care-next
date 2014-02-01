@@ -1,9 +1,13 @@
 SteppedCareNext::Application.routes.draw do
   devise_for :users
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+
+  ##############
+  # Legacy API
+  ##############
   post '/sessions' => 'legacy/user_sessions#create'
 
-  post '/data/groups/:group_guid/users/:user_guid/xelements/STEPPED-CARE-SESSIONS-GUID' => 'legacy/sessions#create'
+  post '/data/groups/:group_guid/users/:user_guid/xelements/STEPPED-CARE-SESSIONS-GUID' => 'legacy/app_events#create'
 
   get '/data/groups/:group_guid/users/:user_guid/xelements/STEPPED-CARE-COACH-CONVO-POSTS-GUID' => 'legacy/coach_conversation_posts#index'
   post '/data/groups/:group_guid/users/:user_guid/xelements/STEPPED-CARE-COACH-CONVO-POSTS-GUID' => 'legacy/coach_conversation_posts#create'
@@ -48,6 +52,10 @@ SteppedCareNext::Application.routes.draw do
   get '/data/groups/:group_guid/users/:user_guid/xelements/:xelement_guid' => 'legacy/xelements#show'
 
   get '/users/:user_guid' => 'legacy/users#show'
+  ##############
+  # / Legacy API
+  ##############
 
-  root :to => "high_voltage/pages#show"
+  get "/pages/*id" => 'pages#show', as: :page, format: false
+  root :to => 'pages#show', id: 'home'
 end
